@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d7b9d5b-7498-44f2-b071-b6245eb9a82c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/1st_day_assignment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluation/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluation/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-1/assignments/4th_assign/CheckStudent/CheckStudent.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-1/assignments/4th_assign/Constructor_Polymor/Constructor_Polymor.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-1/assignments/4th_assign/GetStudentClass/GetStudentClass.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-1/assignments/4th_assign/OddInputNegative/OddInputNegative.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-2/assignments/5th assign/CourseAuth/CourseAuth.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-2/assignments/5th assign/Shapes/Shapes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-2/assignments/5th assign/StringIndex/StringIndex.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-3/assignments/6th assign/ConditionalFactorial/ConditionalFactorial.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-3/assignments/6th assign/ReverseString/ReverseString.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-4/assignments/7th assign/JobMember/JobMember.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-4/assignments/7th assign/StudentDemo/StudentDemo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-1/src/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-2/Methods.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-3/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/Evaluation/Question-3/src/Ticket.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2BW40ESVnWCWEzlGupEROXGmJmx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/VIKAS/Desktop/pushpam_fw19_1155/unit-3"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d7b9d5b-7498-44f2-b071-b6245eb9a82c" name="Changes" comment="" />
+      <created>1657008282239</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657008282239</updated>
+    </task>
+    <servers />
+  </component>
+</project>

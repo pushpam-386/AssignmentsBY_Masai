@@ -1,0 +1,10 @@
+5. Explain different types of Normalisation forms in a DBMS.
+
+
+answer-->
+
+Normalisation is a process of organising the data in database to avoid data redundancy,
+insertion abnormally, update anomaly & deletion anomaly.
+
+There are five types of normalisation-:
+  

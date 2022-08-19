@@ -1,0 +1,107 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| assignment         |
+| demo               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| pushpam            |
+| sakila             |
+| student            |
+| sys                |
+| world              |
++--------------------+
+10 rows in set (0.00 sec)
+
+mysql> create database evaluation_sp_2;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> use evaluation_sp_2;
+Database changed
+
+create table Employee(id int,name varchar(20),sala' at line 1
+mysql> create table Employee(id int,name varchar(20),salary float,
+    -> managerId int);
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> describe employee;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| id        | int         | YES  |     | NULL    |       |
+| name      | varchar(20) | YES  |     | NULL    |       |
+| salary    | float       | YES  |     | NULL    |       |
+| managerId | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table employee add primary key (id);
+Query OK, 0 rows affected (0.31 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc employee;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| id        | int         | NO   | PRI | NULL    |       |
+| name      | varchar(20) | YES  |     | NULL    |       |
+| salary    | float       | YES  |     | NULL    |       |
+| managerId | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+mysql> insert into employee values(1,joe,70000,3);
+ERROR 1054 (42S22): Unknown column 'joe' in 'field list'
+mysql> insert into employee values(1,"joe",70000,3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values(2,"Henry",80000,4);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(3,"Sam",60000,4);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values(4,"Max",90000);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into employee values(4,"Max",90000,null);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from employee;
++----+-------+--------+-----------+
+| id | name  | salary | managerId |
++----+-------+--------+-----------+
+|  1 | joe   |  70000 |         3 |
+|  2 | Henry |  80000 |         4 |
+|  3 | Sam   |  60000 |         4 |
+|  4 | Max   |  90000 |      NULL |
++----+-------+--------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> update employee set managerId=null where id=3;
+Query OK, 1 row affected (0.14 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee;
++----+-------+--------+-----------+
+| id | name  | salary | managerId |
++----+-------+--------+-----------+
+|  1 | joe   |  70000 |         3 |
+|  2 | Henry |  80000 |         4 |
+|  3 | Sam   |  60000 |      NULL |
+|  4 | Max   |  90000 |      NULL |
++----+-------+--------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> select e1.name from employee e1 join
+    -> employee e2 on e1.managerId= e2.id
+    -> where e1.salary>e2.salary;
++------+
+| name |
++------+
+| joe  |
++------+
+1 row in set (0.00 sec)
+

@@ -1,0 +1,45 @@
+Q2) Why String is immutable in java and what is the difference between String and String Builder? And
+write some of the methods of String class at least 5 with example.
+
+
+Ans- In Java, strings are immutable. This means, once we create a string, we cannot
+change that string.
+As Java uses the concept of String literal. Suppose there are 5 reference variables, all
+refer to one object "Masai". If one reference variable changes the value of the object, it
+will be affected by all the reference variables. That is why String objects are immutable
+in Java.
+
+Performance
+during
+concatenation
+Slow as compared to StringBuilder
+during frequent updates and
+concatening.
+Fast as compared to String. Like it is
+faster than String while concatenating
+many strings together in a loop.
+Mutability The string created using the String
+class is immutable.
+The string created using StringBuilder is
+mutable.
+Memory
+Usage during
+concatenation
+Requires more memory to create a
+new instance if operations performed
+on a string change its value.
+It requires less memory as it updates
+the existing instance.
+Nature of
+Object
+An object of String is read-only in
+nature.
+An object of StringBuilder is dynamic in
+nature.
+
+StringBuilder message = new StringBuilder("Welcome");
+message.append(" to Masai");
+System.out.println(message);
+output:
+Welcome to Masai
+

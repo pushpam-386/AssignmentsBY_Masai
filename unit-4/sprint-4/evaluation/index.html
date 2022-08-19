@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        .navbar {
+            display:flex;
+            justify-content:space-evenly;
+            margin-left:20px;
+            margin-right:40px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            margin-top:20px
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display:grid;
+            margin:50px 550px 80px 550px;
+            display:block;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        #form #gender {
+            display: block;
+        }
+
+        #form #course {
+            display:block;
+        }
+
+        #form:last-child {
+            margin:center;
+
+        }
+
+        div h1 {
+            color: black;
+            
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index.html">
+            <h1>Add Students</h1>
+        </a>
+        <a href="./students.html">
+            <h1>Students Database</h1>
+        </a>
+        <a href="./admitted.html">
+            <h1>Admitted</h1>
+        </a>
+        <a href="./rejected.html">
+            <h1>Rejected</h1>
+        </a>
+    </div>
+    <h1>Fill this form for admission in Masai School</h1>
+    <form id="form">
+        <input placeholder="Name" type="text" id="name">
+        <input placeholder="Email" type="email" id="email">
+        <input placeholder="Phone Number" type="number" id="phone">
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <select id="course">
+            <option value="Web-Development">Web-Development</option>
+            <option value="Android-Development">Android-Development</option>
+            <option value="Data-Analitics">Data-Analitics</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script src="./index.js"></script>
+
+</html>

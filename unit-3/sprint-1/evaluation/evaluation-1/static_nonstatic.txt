@@ -1,0 +1,9 @@
+1. Static Variables- Static variables can be accessed by static member as well as 
+non-static member functions. Memory is allocated at the initialization of the static variable.
+static variable is declared using static keyword. Static method is a method that belongs to 
+a class and this method can be called without object calling.  
+
+
+2. Non-Static Variables- Non-Static Varibles can be accessed by objects only. Memory is
+allocated is done only at runtime. Non-static variable is declared without any keyword.
+Non-static variables are specific to instance object in which they are created. 

@@ -1,0 +1,102 @@
+create table StudentFine(StudentId varchar(25) Primary key,
+Name varchar(20),
+LicenseNo varchar(25),
+CarReg varchar(20) unique);
+
+
+insert into StudentFine values("F1011","CK Fong","P100",
+"JGK9201");
+
+
+insert into StudentFine values("L782","AdamJames","P290",
+"JJL99");
+
+insert into StudentFine values("H762","MalaDewi","P764",
+"JJK7654");
+
+select * from StudentFine;
+
++-----------+-----------+-----------+---------+
+| StudentId | Name      | LicenseNo | CarReg  |
++-----------+-----------+-----------+---------+
+| F1011     | CK Fong   | P100      | JGK9201 |
+| H762      | MalaDewi  | P764      | JJK7654 |
+| L782      | AdamJames | P290      | JJL99   |
++-----------+-----------+-----------+---------+
+
+create table FineDetails(
+carReg varchar(20),
+ReceiptNo varchar(20),
+Date date, 
+offenceCode int,
+FineRm double, 
+Foreign key (carReg) References StudentFine(CarReg));
+
+mysql> desc FineDetails;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| carReg      | varchar(20) | NO   | PRI | NULL    |       |
+| ReceiptNo   | varchar(20) | YES  |     | NULL    |       |
+| Date        | date        | YES  |     | NULL    |       |
+| offenceCode | int         | YES  |     | NULL    |       |
+| FineRm      | double      | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+
+insert into FineDetailS values("JGK9201",
+"00345",
+'2006/03/10',
+2,
+30.0);
+
+insert into FineDetailS values("JGK9201",
+"00690",
+'2006/03/15',
+1,
+20.0);
+
+insert into FineDetailS values("JGK9201",
+"00810",
+'2006/03/20',
+2,
+30.0);
+
+insert into FineDetailS values("JGK9201",
+"00345",
+'2006/03/10',
+2,
+30.0);
+
+insert into FineDetailS values("JGK9201",
+"00345",
+'2006/03/10',
+2,
+30.0);
+
+insert into FineDetailS values("JGK9201",
+"00345",
+'2006/03/10',
+2,
+30.0);
+
+insert into FineDetailS values("JGK9201",
+"00345",
+'2006/03/10',
+2,
+30.0);
+
+insert into FineDetailS values("JGK9201",
+"00345",
+'2006/03/10',
+2,
+30.0);
+
+
+
+
+
+
+
+
+

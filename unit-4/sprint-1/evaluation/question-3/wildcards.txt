@@ -1,0 +1,16 @@
+1. Upper bound Wildcards:-
+
+These wildcards can be used when you want to relax the restrictions on a variable.
+Example= public static void add(List<? extends Number> List)
+
+
+2. Lower bounded Wildcards:-
+ 
+It is expressed using the wildcards character('?'), followed by the super keywords,
+followed by its lower bound.
+
+Syntax: Collectiontype<? super A>
+
+
+-->>we use extendred key word when we want to get values out of a structure and super
+    wildcards when you put values in structure.

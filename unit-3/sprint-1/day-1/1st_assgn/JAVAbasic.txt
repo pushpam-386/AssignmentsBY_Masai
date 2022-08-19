@@ -1,0 +1,40 @@
+A.  1. JEE-The Java EE platform provides an API and runtime environment for developing and
+running large-scale, multi-tiered, scalable, reliable, and secure network applications.
+
+2.JSE-This is the core Java platform, it is a specification, which contains the core libraries to
+develop standalone, networking, database, GUI, multithreaded types of applications.
+
+3.JME-It is a subset of Java SE, designed used for microdevices and embedded development
+like mobile phones, sensors, micro-controller, TV set-top boxes etc.
+
+
+
+B. Features of Java- [Simple]
+                     [Object-Oriented]
+                     [Portable and Platform Independent]
+                     [Secure]
+                     [Robust]
+                     [Multithreaded]
+
+
+C. 1. JDK- This JDK software is used for developing and executing Java applications.This java compiler comes with the JDK software.
+
+2. JRE- JRE = (JVM + Predefined Library classes). This java byte-code, is platform-independent, which means it can run on the Window,
+Mac, Linux, or any Operating-system that has JRE (Java Runtime Environment).
+
+3. JVM- This JRE has a software component called JVM (Java Virtual Machine), this JVM
+takes our java byte-code and translates it to the native code for the underlying OS.
+
+
+D. PLATFORM INDEPENDENCY- If we are in the Window Operating-system, this JVM will convert our java byte-code to
+the window Operating-system understandable native code, and if we are in the Linux
+environment, then this JVM will convert our java byte-code to the Linux OS
+understandable native code. with this architecture only, our java applications are
+portable or platform-independent.
+We can write a java program on a Window machine and can execute it in a Linux
+or macOS or any other OS that have JRE.
+
+
+3.
+
+

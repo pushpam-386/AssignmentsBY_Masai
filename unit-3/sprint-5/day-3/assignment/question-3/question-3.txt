@@ -1,0 +1,6 @@
+List	                                                                Set
+1. The List is an indexed sequence.	                                1. The Set is an non-indexed sequence.
+2. List allows duplicate elements	                                2. Set doesn’t allow duplicate elements.
+3. Elements by their position can be accessed.	                        3. Position access to elements is not allowed.
+4. Multiple null elements can be stored.	                        4. Null element can store only once.
+5. List implementations are ArrayList, LinkedList, Vector, Stack	5. Set implementations are HashSet, LinkedHashSet.

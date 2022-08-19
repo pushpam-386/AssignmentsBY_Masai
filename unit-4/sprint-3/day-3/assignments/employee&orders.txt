@@ -1,0 +1,23 @@
+mysql> CREATE TABLE customers (customer_id INT NOT NULL PRIMARY KEY,first_name VARCHAR(255) NOT NULL,last_name VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, address VARCHAR(255) DEFAULT NULL,city VARCHAR(255) DEFAULT NULL, state VARCHAR(2) DEFAULT NULL,zip_code VARCHAR(5) DEFAULT NULL);
+Query OK, 0 rows affected (0.03 sec)
+
+
+mysql> insert into customers values( 1, "abc", "a" , "abc@mail.com" , "1st street", "chennai" , "TN" , "60001" );
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customers values( 3, "ijk", "i" , "ilk@gmail.com" , "3rd street", "Mumbai" , "Mh" , "40002" );
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into customers values( 2, "efg", "e" , "efg@gmail.com" , "2nd street", "Banglore" , "KA" , "50002" );
+Query OK, 1 row affected (0.37 sec)
+
+mysql> select * from Customers;
++-------------+------------+-----------+---------------+------------+----------+-------+----------+
+| customer_id | first_name | last_name | email         | address    | city     | state | zip_code |
++-------------+------------+-----------+---------------+------------+----------+-------+----------+
+|           1 | abc        | a         | abc@mail.com  | 1st street | chennai  | TN    | 60001    |
+|           2 | efg        | e         | efg@gmail.com | 2nd street | Banglore | KA    | 50002    |
+|           3 | ijk        | i         | ilk@gmail.com | 3rd street | Mumbai   | Mh    | 40002    |
++-------------+------------+-----------+---------------+------------+----------+-------+----------+
+3 rows in set (0.00 sec)
+

@@ -1,0 +1,77 @@
+Question 2.
+
+2A) Explain ThreadPool Executor in java with an Example.
+
+Answer:-->ThreadPool Executor is used to manages the collection of Runnable threads.
+       -->ThreadPool contains a queue that keep tasks waiting to get executed.
+       -->It works same as normal thread accept the multiple work handling is done my
+          same or multiple threads at a time.  
+
+
+Example-->>Public class Pool implements Runnable{
+	private int age;
+	String name;
+	
+	public static int age(int age){
+		return age*2;
+	}
+
+	public void run(){
+        	this.age(25);
+        }
+	
+}
+
+
+public class main{
+	public static void main(String[] args){
+            Pool pool=new Pool();
+	    ThreadPool threadpool=new ThreadPop(pool);
+	    threadPool.execute();
+	    
+  	    threadPool.WaitUntilAllTaskFinished();
+            threasdPool.stop();	
+       }
+}
+
+
+
+
+
+
+2B) Write a program that will result in a deadlock. How will you fix deadlock in Java show with
+examples?
+
+Answer:-->Deadlock can occur when a thread is waiting for an object lock, which is qcquired by another thread.
+       -->Deadlock is part of Multithreading.
+       -->As both the threads are waiting for each other to release the lock.
+       -->DeadLock can't be fixed, it can be only avoided.
+
+
+public class deadLock{
+  public static void main(String[] args){
+    final String res1="Pushpam";
+    final String res2="Shubham";
+
+    Thread t1=new Thread(){
+    public void run(){
+    synchronized(res1){
+    System.out.println("Thread1: locked res1");
+}
+}
+}
+
+   try{(Thread.sleeo(1000);}
+   catch{(Exception e)  
+      System.out.println(e.getmessage());
+}
+   syncronized(res2){
+      System.out.println("Thread2: locked res2");
+}
+}
+}
+
+   t1.start();
+   t2.start();
+}
+}  	

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="164fd8b0-4cae-46c3-848a-decd441ff557" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../unit-1/sprint-1/evaluation/Folder 3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unit-1/sprint-1/evaluation/Folder 3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-1/src/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-2/Methods.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-3/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-2/evaluation/Evaluation/Question-3/src/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Instructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Instructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint-3/day-3/assignments/question3/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sprint-3/day-4/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sprint-3/day-4/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2CFJYYP2vbW2HaKoS27rJilJheg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/VIKAS/Desktop/pushpam_fw19_1155/unit-3/sprint-5/day-1"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="164fd8b0-4cae-46c3-848a-decd441ff557" name="Changes" comment="" />
+      <created>1658392450534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658392450534</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,45 @@
+mysql> create database assignment;
+
+mysql> use assignment;
+
+mysql> create table city(id int,name varchar(17),countryCode varchar(3),Discrict varchar(20),population int);
+
+mysql> insert into values(3878,"Scottsdale","USA","Arizona",202705);
+
+mysql> insert into city values(3878,"Scottsdale","USA","Arizona",202705);
+
+mysql> insert into city values(3973,"concord","USA","California",121780);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into city values(3977,"cedar rapids","USA","lowa",120758);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into city values(3982,"coral springs","USA","florida",87456);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from city;
++------+---------------+-------------+------------+------------+
+| id   | name          | countryCode | Discrict   | population |
++------+---------------+-------------+------------+------------+
+| 3878 | Scottsdale    | USA         | Arizona    |     202705 |
+| 3965 | corona        | USA         | California |      90000 |
+| 3973 | concord       | USA         | California |     121780 |
+| 3977 | cedar rapids  | USA         | lowa       |     120758 |
+| 3982 | coral springs | USA         | florida    |      87456 |
++------+---------------+-------------+------------+------------+
+
+
+
+
+mysql> select sum(population)from city where discrict="california";
++-----------------+
+| sum(population) |
++-----------------+
+|          211780 |
++-----------------+
+1 row in set (0.00 sec)
+
+
+
+
+

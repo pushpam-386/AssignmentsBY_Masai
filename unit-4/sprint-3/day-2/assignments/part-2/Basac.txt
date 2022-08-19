@@ -1,0 +1,111 @@
+mysql> create table employee (EmpID int,EmpfName varchar(20),EmpLName varchar(20),Department varchar(20),Project varchar(20),Address varchar(40),doB varchar(20),Gender varchar(10),Salary int,Primary Key(EmPid));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> insert into employee values(1,"Sanjay","Mehra","HR","P1","Hyderabad(HYD)","01/12/19","M",50000);
+
+mysql> insert into employee values(2,"Ananya","Mishra","Admin","P2","Delhi(DEL)","02/05/19","F",75000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(3,"Sonia","Kulkarni","HR","P1","Mumbai(BOM)","01/01/1980","M",90000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(4,"Deepak","Kulkarni","HR","P1","Mumbai(BOM)","01/01/1909","F",100000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+| EmpID | EmpfName | EmpLName | Department | Project | Address        | doB        | Gender | Salary |
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+|     1 | Sanjay   | Mehra    | HR         | P1      | Hyderabad(HYD) | 01/12/19   | M      |  50000 |
+|     2 | Ananya   | Mishra   | Admin      | P2      | Delhi(DEL)     | 02/05/19   | F      |  75000 |
+|     3 | Sonia    | Kulkarni | HR         | P1      | Mumbai(BOM)    | 01/01/1980 | M      |  90000 |
+|     4 | Deepak   | Kulkarni | HR         | P1      | Mumbai(BOM)    | 01/01/1909 | F      | 100000 |
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+4 rows in set (0.00 sec)
+
+
+mysql> select * from employee where department="HR";
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+| EmpID | EmpfName | EmpLName | Department | Project | Address        | doB        | Gender | Salary |
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+|     1 | Sanjay   | Mehra    | HR         | P1      | Hyderabad(HYD) | 01/12/19   | M      |  50000 |
+|     3 | Sonia    | Kulkarni | HR         | P1      | Mumbai(BOM)    | 01/01/1980 | M      |  90000 |
+|     4 | Deepak   | Kulkarni | HR         | P1      | Mumbai(BOM)    | 01/01/1909 | F      | 100000 |
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee where Gender="F";
++-------+----------+----------+------------+---------+-------------+------------+--------+--------+
+| EmpID | EmpfName | EmpLName | Department | Project | Address     | doB        | Gender | Salary |
++-------+----------+----------+------------+---------+-------------+------------+--------+--------+
+|     2 | Ananya   | Mishra   | Admin      | P2      | Delhi(DEL)  | 02/05/19   | F      |  75000 |
+|     4 | Deepak   | Kulkarni | HR         | P1      | Mumbai(BOM) | 01/01/1909 | F      | 100000 |
++-------+----------+----------+------------+---------+-------------+------------+--------+--------+
+2 rows in set (0.00 sec)
+
+
+mysql> select * from employee where Department="HR" And Gender="F";
++-------+----------+----------+------------+---------+-------------+------------+--------+--------+
+| EmpID | EmpfName | EmpLName | Department | Project | Address     | doB        | Gender | Salary |
++-------+----------+----------+------------+---------+-------------+------------+--------+--------+
+|     4 | Deepak   | Kulkarni | HR         | P1      | Mumbai(BOM) | 01/01/1909 | F      | 100000 |
++-------+----------+----------+------------+---------+-------------+------------+--------+--------+
+1 row in set (0.00 sec)
+
+
+mysql> select * from employee where Empfname="A%" or  Empfname="e%" or Empfname="i%" or Empfname="o%" or Empfname="u%";
+Empty set (0.00 sec)
+
+
+mysql> select * from employee where Empfname like '_A%' or  Empfname like '_E%' or Empfname like '_i%' or Empfname like '_o%' or Empfname like '_u%';
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+| EmpID | EmpfName | EmpLName | Department | Project | Address        | doB        | Gender | Salary |
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+|     1 | Sanjay   | Mehra    | HR         | P1      | Hyderabad(HYD) | 01/12/19   | M      |  50000 |
+|     3 | Sonia    | Kulkarni | HR         | P1      | Mumbai(BOM)    | 01/01/1980 | M      |  90000 |
+|     4 | Deepak   | Kulkarni | HR         | P1      | Mumbai(BOM)    | 01/01/1909 | F      | 100000 |
++-------+----------+----------+------------+---------+----------------+------------+--------+--------+
+3 rows in set (0.01 sec)
+
+
+mysql> select department from employee;
++------------+
+| department |
++------------+
+| HR         |
+| Admin      |
+| HR         |
+| HR         |
++------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee where Gender="M" and salary<=75000;
++-------+----------+----------+------------+---------+----------------+----------+--------+--------+
+| EmpID | EmpfName | EmpLName | Department | Project | Address        | doB      | Gender | Salary |
++-------+----------+----------+------------+---------+----------------+----------+--------+--------+
+|     1 | Sanjay   | Mehra    | HR         | P1      | Hyderabad(HYD) | 01/12/19 | M      |  50000 |
++-------+----------+----------+------------+---------+----------------+----------+--------+--------+
+1 row in set (0.00 sec)
+
+
+mysql> select count(department) from employee;
++-------------------+
+| count(department) |
++-------------------+
+|                 4 |
++-------------------+
+1 row in set (0.00 sec)
+
+
+mysql> select count(department) from employee where department="Hr";
++-------------------+
+| count(department) |
++-------------------+
+|                 3 |
++-------------------+
+1 row in set (0.00 sec)
+
+
+
+
+

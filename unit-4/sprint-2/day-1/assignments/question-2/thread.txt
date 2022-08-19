@@ -1,0 +1,7 @@
+Life-cycle of a Thread (State of a thread):
+In Java, a thread always exists in any one of the following states. These states are:
+1. New state
+2. Runnable state
+3. Running state
+4. Blocked state
+5. Dead state

@@ -1,0 +1,36 @@
+--Exception classes are categoried in 2 category:
+
+1.checked exception  (checked by java compiler whether we have handled that exception or not ) 
+2.unchecked exception (not checked by the compiler)
+
+
+
+whether exception is checked or unchecked, exception always occurs at runtime.it never occurs at compile time. compile time only occurs compilation error.
+
+
+--in the process of checking compiler will not bother even we don't handle object of some exception classes.
+
+--but there are some statements for which applying the concept of exception handling is mandatory at compile time itself.
+if we don't handle them then compiler will generate a compile time error.
+
+the exception class object for which compiler force us to handle them at compile time only are knwon as checked excception 
+
+ex:
+
+ClassNotFoundException
+IOException
+SQLException
+
+and for those exception classes compiler will not force us (it ignores ) at compile time to handle are known as unchecked exceptions:
+
+AE , NPE,CCE,AIOBE, NFE
+ 
+
+
+
+
+RuntimeException and its child classes considered as unchecked exception (runtime exceptions)
+--if some statement in our java code may generate these classes object, handling these classes object at compiler time is optional.
+
+Exception class and its child class except RuntimeException class is knwon as checked exception, 
+--if some statement in our java code may generate these classes object, handling these classes object at compile time is mandatory, otherwise compiler will generate compile time error.

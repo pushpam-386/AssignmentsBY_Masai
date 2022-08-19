@@ -1,0 +1,19 @@
+create table Employee(empId int primary key
+empName varchar(20),
+dapartment varchar(20),
+contactNo varchar(20),
+emailNo varchar(20),
+empHeadId int);
+
+
+create table EmpDept(deptId varchar()20 primary key,
+deptId varchar(20),
+deptName varchar(20),
+dept_off varchar(20),
+deptHead int,
+Foreign key (DepHead) referances Employee(empId);
+
+
+select empName from Employee
+where empId = select deptHead from EmpDept where deptName ="HR");
+

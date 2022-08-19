@@ -1,0 +1,31 @@
+A. What is normalization and why is it needed?
+
+Answer-->Normalization is process to avoid data duplication.
+      -->To avoid insertion anomaly, update anomaly and deletion anomaly.
+      -->To maximize the efficiency of a database.
+      -->There are many types of Normalization.
+     
+       ==>1NF (First Normal Form)
+       ==>2NF (Second Normal Form)
+       ==>3NF (Third Normal Form)
+       ==>BCNF
+       ==>4NF
+       ==>5NF
+       ==>6NF
+
+
+
+
+
+B. Explain the difference between an insert anomaly, update anomaly and delete anomaly.
+
+Answer-->Update anomalies: If one copy of such repeated data is updated, an inconsistency is
+created. unless all copies are similarly updated (inconsistency is when two copies of the
+same data do not match. In such cases we cannot decide which copy is right and the data is
+said to become inconsistent).
+
+Insertion anomalies: It may not be possible to store some information unless some other
+information is stored well.
+
+Deletion anomalies: It may not be possible to delete some information without losing some
+other information as well.

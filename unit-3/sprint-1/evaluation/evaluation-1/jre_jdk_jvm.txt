@@ -1,0 +1,14 @@
+1. JDK- (Java Development Kit) is a kit that provides the environment to develop 
+and execute the java program. 
+It provide two things- Development Tools.
+                     - JRE to execute your java program. 
+
+
+2.JRE- (Java Runtime Environment) is an installation package 
+that provides an environment to only run the java program onto your machine. 
+JRE is only used by those who only want to run the java program that are end-users 
+of your system.
+
+
+3.JVM- (Java Virtual Machine) is responsible for executing the java program line by line, 
+hence it is also known as interpreter. This is done after compilation by JDK.

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day-1/assignments/4th_assign/CheckStudent/CheckStudent.iml" filepath="$PROJECT_DIR$/day-1/assignments/4th_assign/CheckStudent/CheckStudent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-3/assignments/6th assign/ConditionalFactorial/ConditionalFactorial.iml" filepath="$PROJECT_DIR$/day-3/assignments/6th assign/ConditionalFactorial/ConditionalFactorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-1/assignments/4th_assign/Constructor_Polymor/Constructor_Polymor.iml" filepath="$PROJECT_DIR$/day-1/assignments/4th_assign/Constructor_Polymor/Constructor_Polymor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-2/assignments/5th assign/CourseAuth/CourseAuth.iml" filepath="$PROJECT_DIR$/day-2/assignments/5th assign/CourseAuth/CourseAuth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-1/assignments/4th_assign/GetStudentClass/GetStudentClass.iml" filepath="$PROJECT_DIR$/day-1/assignments/4th_assign/GetStudentClass/GetStudentClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-4/assignments/7th assign/JobMember/JobMember.iml" filepath="$PROJECT_DIR$/day-4/assignments/7th assign/JobMember/JobMember.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-1/assignments/4th_assign/OddInputNegative/OddInputNegative.iml" filepath="$PROJECT_DIR$/day-1/assignments/4th_assign/OddInputNegative/OddInputNegative.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-3/assignments/6th assign/ReverseString/ReverseString.iml" filepath="$PROJECT_DIR$/day-3/assignments/6th assign/ReverseString/ReverseString.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-2/assignments/5th assign/Shapes/Shapes.iml" filepath="$PROJECT_DIR$/day-2/assignments/5th assign/Shapes/Shapes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-2/assignments/5th assign/StringIndex/StringIndex.iml" filepath="$PROJECT_DIR$/day-2/assignments/5th assign/StringIndex/StringIndex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day-4/assignments/7th assign/StudentDemo/StudentDemo.iml" filepath="$PROJECT_DIR$/day-4/assignments/7th assign/StudentDemo/StudentDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sprint-2.iml" filepath="$PROJECT_DIR$/.idea/sprint-2.iml" />
+    </modules>
+  </component>
+</project>
