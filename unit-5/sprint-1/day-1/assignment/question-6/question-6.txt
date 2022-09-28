@@ -1,0 +1,10 @@
+Q.6.What are the different types of Maven repositories? Discuss.
+
+Anwser--->>
+Types of maven repository:
+
+1.Local Repository
+2.Central Repository
+3.Remote Repository
+
+

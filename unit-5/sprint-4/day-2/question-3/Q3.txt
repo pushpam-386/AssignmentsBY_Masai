@@ -1,0 +1,81 @@
+WS r categorised in 2 category:
+---------------------------------------
+1. SOAP based WS
+2.Restfull WS.
+
+
+1. SOAP based WS: (Simple Object Access Protocol)
+========================================
+
+--it is a xml based protocol, to communicate bt client application to the server application, since it is xml based , it is also platform and language independent.
+
+<student>
+<roll>100</roll>
+<name>Ram</name>
+<marks>850</marks>
+</student>
+
+WSDL file (it is also an xml file in which we describe all the services which we expose to the client)
+
+--creating a WS using SOAP are heavy weight application, becoz apart from creating the WS classes (actual service) there is a need to create some extra binding classes to parse the xml and convert them in java object.
+and vice-versa, and moreever to expose and consume the webservices we need to generate some xml file (WSDL file) which little complex file.
+
+
+--in order to make WS as light weight, another architectural style is defined named as REST (Representational State Transfer)
+
+
+--This REST architectural style tells that create a WS with the requeired operations/functionalities and expose them through the Http protocol . and allow them to be accessed by the client with the help of Http protocol without any extra binding classes and any xml files.
+
+
+--based on this architectural style sun-microsystem has released JAX-RS api for 
+creating and consuming the RESTfull webservices.
+
+--this JAX-RS api has diff implementaions are there (Jersey, RestEasy)
+
+
+
+
+Rules to make a java class as Restfull WS:
+================================
+JAX-RS  api -----> Jersey, RestEasy  
+
+
+--in restfull ws, A WS class is called as "rootresource" class and each method (service) of that class is called as "resource".
+
+1. each resource (method/service) of a ws class should contain an addressable uri, that can be accessed by http protocol.
+
+2. while exposing the Restfull WS we need to take the support the Http protocol methods:
+
+ex:
+
+GET: if we want to create a service that returns some info/data to the client then we define that service and expose that service with the help GET method of Http protocol.
+
+POST: getting/accepting  the data from the client and stroing or inserting the data. 
+
+PUT : getting/accepting some data from the client and update the existing data.
+
+DELETE : to delete some information from the server side.
+
+
+3. every restfull service class must be public and it must contains zero argument constructor.
+
+4.webservice method should consume or return the data in the form of following format.
+
+
+text/plain
+application/xml
+application/json   -- mosty used type
+
+
+--to make a java class as a Restfull WS, we need to use JAX-RS api and one of its implementation (jersey, RestEasy) , outside of Spring environment.
+
+--Spring f/w itself has provided its own api with the implementation to make a Spring bean (Controller class, the 
+class which is annotated with @Controller annotation) as a restfull WS class.
+
+
+***Spring MVC- provides a DispatcherServlet (predefined servlet with all the flow control logic), but without 
+Spring boot, if we try to create a Spring-mvc project then developer need to configure this DispatcherServlet 
+inside thier application.
+
+--but with the Spring Boot, DispatcherServlet is already configured as a front controller of our application.
+furthur more Spring boot also provides integrated tomcat server to deploy our application.

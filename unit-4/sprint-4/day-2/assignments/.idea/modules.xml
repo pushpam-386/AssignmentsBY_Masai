@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Jdbc_Connection_assignment/Jdbc_Connection_assignment.iml" filepath="$PROJECT_DIR$/Jdbc_Connection_assignment/Jdbc_Connection_assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/assignments.iml" filepath="$PROJECT_DIR$/.idea/assignments.iml" />
+    </modules>
+  </component>
+</project>

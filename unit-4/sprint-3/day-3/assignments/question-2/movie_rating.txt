@@ -1,0 +1,164 @@
+mysql> create table movie(id int primary key,tittle varchar(20),director varchar(20),year int,length_minutes int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table Movie_rating(id int primary key,rating double,domestic_sales int,international_sales int,foreign key (id) references movie(id));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc movie;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| id             | int         | NO   | PRI | NULL    |       |
+| tittle         | varchar(20) | YES  |     | NULL    |       |
+| director       | varchar(20) | YES  |     | NULL    |       |
+| year           | int         | YES  |     | NULL    |       |
+| length_minutes | int         | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc movie_rating;
++---------------------+--------+------+-----+---------+-------+
+| Field               | Type   | Null | Key | Default | Extra |
++---------------------+--------+------+-----+---------+-------+
+| id                  | int    | NO   | PRI | NULL    |       |
+| rating              | double | YES  |     | NULL    |       |
+| domestic_sales      | int    | YES  |     | NULL    |       |
+| international_sales | int    | YES  |     | NULL    |       |
++---------------------+--------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into movie values(1,"toy story","john lessester",1995,81);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into movie values(2,"a Bug's life","john lessester",1998,95);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie values(3,"toy story 2","john lessester",1999,93);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie values(4,"mosters_inc","pete doctor",2001,92);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into movie values(5,"civil war","andrew stanton",2003,107);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie values(6,"the incredibles","brad bird",2004,116);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie_rating values(5,8.2,380843261,555900000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into movie_rating values(1,7.4,268492764,475066843);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie_rating values(3,8,206445654,417277164);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie_rating values(2,6.4,191452396,368400000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie_rating values(4,7.9,245852179,239163000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into movie_rating values(6,8,261441092,370001000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> desc movie;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| id             | int         | NO   | PRI | NULL    |       |
+| tittle         | varchar(20) | YES  |     | NULL    |       |
+| director       | varchar(20) | YES  |     | NULL    |       |
+| year           | int         | YES  |     | NULL    |       |
+| length_minutes | int         | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from movie;
++----+-----------------+----------------+------+----------------+
+| id | tittle          | director       | year | length_minutes |
++----+-----------------+----------------+------+----------------+
+|  1 | toy story       | john lessester | 1995 |             81 |
+|  2 | a Bug's life    | john lessester | 1998 |             95 |
+|  3 | toy story 2     | john lessester | 1999 |             93 |
+|  4 | mosters_inc     | pete doctor    | 2001 |             92 |
+|  5 | civil war       | andrew stanton | 2003 |            107 |
+|  6 | the incredibles | brad bird      | 2004 |            116 |
++----+-----------------+----------------+------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from movie_rating;
++----+--------+----------------+---------------------+
+| id | rating | domestic_sales | international_sales |
++----+--------+----------------+---------------------+
+|  1 |    7.4 |      268492764 |           475066843 |
+|  2 |    6.4 |      191452396 |           368400000 |
+|  3 |      8 |      206445654 |           417277164 |
+|  4 |    7.9 |      245852179 |           239163000 |
+|  5 |    8.2 |      380843261 |           555900000 |
+|  6 |      8 |      261441092 |           370001000 |
++----+--------+----------------+---------------------+
+6 rows in set (0.30 sec)
+
+mysql> select tittle,domestic_sales,international_sales from movie inner join movie_rating on movie.id=movie_rating.id;
++-----------------+----------------+---------------------+
+| tittle          | domestic_sales | international_sales |
++-----------------+----------------+---------------------+
+| toy story       |      268492764 |           475066843 |
+| a Bug's life    |      191452396 |           368400000 |
+| toy story 2     |      206445654 |           417277164 |
+| mosters_inc     |      245852179 |           239163000 |
+| civil war       |      380843261 |           555900000 |
+| the incredibles |      261441092 |           370001000 |
++-----------------+----------------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> select tittle,domestic_sales,international_sales from movie inner join movie_rating on movie.id=movie_rating.id where international_sales > domestic_sales;
++-----------------+----------------+---------------------+
+| tittle          | domestic_sales | international_sales |
++-----------------+----------------+---------------------+
+| toy story       |      268492764 |           475066843 |
+| a Bug's life    |      191452396 |           368400000 |
+| toy story 2     |      206445654 |           417277164 |
+| civil war       |      380843261 |           555900000 |
+| the incredibles |      261441092 |           370001000 |
++-----------------+----------------+---------------------+
+5 rows in set (0.29 sec)
+
+mysql> select tittle,domestic_sales,international_sales from movie inner join movie_rating on movie.id=movie_rating.id order by rating desc;
++-----------------+----------------+---------------------+
+| tittle          | domestic_sales | international_sales |
++-----------------+----------------+---------------------+
+| civil war       |      380843261 |           555900000 |
+| toy story 2     |      206445654 |           417277164 |
+| the incredibles |      261441092 |           370001000 |
+| mosters_inc     |      245852179 |           239163000 |
+| toy story       |      268492764 |           475066843 |
+| a Bug's life    |      191452396 |           368400000 |
++-----------------+----------------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> select tittle,rating,domestic_sales,international_sales from movie inner join movie_rating on movie.id=movie_rating.id order by rating desc;
++-----------------+--------+----------------+---------------------+
+| tittle          | rating | domestic_sales | international_sales |
++-----------------+--------+----------------+---------------------+
+| civil war       |    8.2 |      380843261 |           555900000 |
+| toy story 2     |      8 |      206445654 |           417277164 |
+| the incredibles |      8 |      261441092 |           370001000 |
+| mosters_inc     |    7.9 |      245852179 |           239163000 |
+| toy story       |    7.4 |      268492764 |           475066843 |
+| a Bug's life    |    6.4 |      191452396 |           368400000 |
++-----------------+--------+----------------+---------------------+
+6 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+

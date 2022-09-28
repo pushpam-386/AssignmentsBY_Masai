@@ -1,0 +1,22 @@
+limitation of EM methods in performing CRUD operations:-
+----------------------------------------------------------------------
+
+only 4 methods are there:-
+
+persist();
+find()
+merge();
+remove();
+
+
+
+1.Retrieving Entity obj based on only ID field(PK field) @Id
+
+2.multiple Entity obj retrival is not possible (multiple record)
+
+3.bulk update and bulk delete is also not possible
+
+4.to access Entity obj we can not specify some extra condition.
+
+
+--to overcome the above limitation JPA has provided JPQL (java persistence query language).

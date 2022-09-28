@@ -1,0 +1,24 @@
+create table Abc (rollNo int primary key,
+name varchar(20),
+Standard varchar(20),
+dob Date,
+fees int);
+
+mysql> create table Abc (rollNo int primary key,
+    -> name varchar(20),
+    -> Standard varchar(20),
+    -> dob Date,
+    -> fees int);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc abc;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| rollNo   | int         | NO   | PRI | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| Standard | varchar(20) | YES  |     | NULL    |       |
+| dob      | date        | YES  |     | NULL    |       |
+| fees     | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)

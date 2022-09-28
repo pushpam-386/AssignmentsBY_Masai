@@ -1,0 +1,21 @@
+Servlet--->>
+Servlets are the Java programs that run on the Java-enabled web server or application server. 
+They are used to handle the request obtained from the webserver, process the request, produce 
+the response, then send a response back to the webserver. 
+
+Properties of Servlets are as follows:
+
+Servlets work on the server-side.
+Servlets are capable of handling complex requests obtained from the webserver.
+
+
+Dispatcher Servlet---->>
+Any request is going to come into our website the front controller is going to stand in 
+front and is going to accept all the requests and once the front controller accepts that 
+request then this is the job of the front controller that it will make a decision that who 
+is the right controller to handle that request. 
+
+DispatcherServlet handles an incoming HttpRequest, delegates the request, and processes that 
+request according to the configured HandlerAdapter interfaces that have been implemented within 
+the Spring application along with accompanying annotations specifying handlers, controller endpoints, 
+and response objects.

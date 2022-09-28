@@ -1,0 +1,16 @@
+Spring MVC: Spring MVC is a Web MVC Framework for building web applications. It contains a lot of configuration files for various
+capabilities. It is an HTTP oriented web application development framework.
+
+-Spring MVC is a model view controller-based web
+framework under the Spring framework.
+
+-It provides ready to use  features for building a
+web application.
+
+-It requires build configuration manually.
+
+-A Deployment descriptor is required.
+
+-It specifies each dependency separately.
+
+-It takes more time to achieve the same.

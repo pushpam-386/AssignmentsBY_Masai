@@ -1,0 +1,130 @@
+mysql> CREATE TABLE onlinecustomers
+    -> (customerid INT PRIMARY KEY auto_increment,
+    -> CustomerName VARCHAR(100),
+    -> CustomerCity VARCHAR(100),
+    -> Customermail VARCHAR(100));
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> CREATE TABLE orders
+    -> (orderId INT PRIMARY KEY auto_increment,
+    -> customerid INT,
+    -> ordertotal float,
+    -> discountrate float,
+    -> orderdate DATETIME);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> CREATE TABLE sales
+    -> (salesId INT PRIMARY KEY auto_increment,
+    -> orderId INT,
+    -> salestotal FLOAT);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc onlinecustomers;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| customerid   | int          | NO   | PRI | NULL    | auto_increment |
+| CustomerName | varchar(100) | YES  |     | NULL    |                |
+| CustomerCity | varchar(100) | YES  |     | NULL    |                |
+| Customermail | varchar(100) | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> desc orders;
++--------------+----------+------+-----+---------+----------------+
+| Field        | Type     | Null | Key | Default | Extra          |
++--------------+----------+------+-----+---------+----------------+
+| orderId      | int      | NO   | PRI | NULL    | auto_increment |
+| customerid   | int      | YES  |     | NULL    |                |
+| ordertotal   | float    | YES  |     | NULL    |                |
+| discountrate | float    | YES  |     | NULL    |                |
+| orderdate    | datetime | YES  |     | NULL    |                |
++--------------+----------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> desc sales;
++------------+-------+------+-----+---------+----------------+
+| Field      | Type  | Null | Key | Default | Extra          |
++------------+-------+------+-----+---------+----------------+
+| salesId    | int   | NO   | PRI | NULL    | auto_increment |
+| orderId    | int   | YES  |     | NULL    |                |
+| salestotal | float | YES  |     | NULL    |                |
++------------+-------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+
+mysql> insert into sales values(1,20,2000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into sales values(2,30,3000);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into sales values(3,40,4000);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into sales values(40,4000);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into orders values(1,30,5000,10,'2019-12-10');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into orders values(2,31,3000,12,'2020-12-10');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into orders values(3,32,2000,10,'2019-10-10');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into orders values(4,33,2000,10,'2019-07-02');
+Query OK, 1 row affected (0.00 sec)
+
+
+mysql> insert into onlinecustomers values(1,"Pushpam","patna","pushpamtfs@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into onlinecustomers values(2,"Josh","patna","josh@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into onlinecustomers values(3,"rosh","mumbai","rosh@gmail.com");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into onlinecustomers values(4,"ili","delhi","uluu@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from onlinecustomers;
++------------+--------------+--------------+----------------------+
+| customerid | CustomerName | CustomerCity | Customermail         |
++------------+--------------+--------------+----------------------+
+|          1 | Pushpam      | patna        | pushpamtfs@gmail.com |
+|          2 | Josh         | patna        | josh@gmail.com       |
+|          3 | rosh         | mumbai       | rosh@gmail.com       |
+|          4 | ili          | delhi        | uluu@gmail.com       |
++------------+--------------+--------------+----------------------+
+4 rows in set (0.00 sec)
+
+
+
+mysql> select * from sales;
++---------+---------+------------+
+| salesId | orderId | salestotal |
++---------+---------+------------+
+|       1 |      20 |       2000 |
+|       2 |      30 |       3000 |
+|       3 |      40 |       4000 |
++---------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from orders;
++---------+------------+------------+--------------+---------------------+
+| orderId | customerid | ordertotal | discountrate | orderdate           |
++---------+------------+------------+--------------+---------------------+
+|       1 |         30 |       5000 |           10 | 2019-12-10 00:00:00 |
+|       2 |         31 |       3000 |           12 | 2020-12-10 00:00:00 |
+|       3 |         32 |       2000 |           10 | 2019-10-10 00:00:00 |
+|       4 |         33 |       2000 |           10 | 2019-07-02 00:00:00 |
++---------+------------+------------+--------------+---------------------+
+4 rows in set (0.00 sec)
+
+
+select oc.customername, oc.customercity, oc.customermail,
+o.ordertotal from orders o , onlinecustomers oc
+where o.customerid=oc.customerid and
+o.orderid not in (select s.orderid from sales s); 

@@ -1,0 +1,188 @@
+
+
+mysql> create table students(s_id varchar(10) primary key,s_name varchar(20),s_address varchar(20),s_phone int,s_age int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table course(c_id int primary key,C_name varchar(20));
+Query OK, 0 rows affected (0.12 sec)
+
+
+mysql> create table Student_course(S_id varchar(10),c_id int,foreign key (s_id) references students(s_id),foreign key (c_id) references course(c_id), unique(s_id,c_id));
+Query OK, 0 rows affected (0.43 sec)
+
+mysql> desc student_course;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| S_id  | varchar(10) | YES  | MUL | NULL    |       |
+| c_id  | int         | YES  | MUL | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc students;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| s_id      | varchar(10) | NO   | PRI | NULL    |       |
+| s_name    | varchar(20) | YES  |     | NULL    |       |
+| s_address | varchar(20) | YES  |     | NULL    |       |
+| s_phone   | int         | YES  |     | NULL    |       |
+| s_age     | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc course;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| c_id   | int         | NO   | PRI | NULL    |       |
+| C_name | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+ysql> insert into students value("s1","ram","delhi",9455123451,18);
+ERROR 1264 (22003): Out of range value for column 's_phone' at row 1
+mysql> alter table students add s_phone int(20);
+ERROR 1060 (42S21): Duplicate column name 's_phone'
+mysql> alter table students modify s_phone int(20);
+Query OK, 0 rows affected, 1 warning (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> insert into students value("s1","ram","delhi",9455123451,18);
+ERROR 1264 (22003): Out of range value for column 's_phone' at row 1
+mysql> alter table students modify s_phone double;
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into students value("s1","ram","delhi",9455123451,18);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into students value("s2","ramesh","gurgaon",9652431543,18);
+Query OK, 1 row affected (0.31 sec)
+
+mysql> insert into students value("s3","sujit","chandigarh",9156253131,20);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into students
+    -> values
+    -> ("s4","Suresh","Delhi","9156768971",18),
+    -> ("s5","Ratan","Delhi","9567890876",20);
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+ysql> select * from students;
++------+--------+------------+------------+-------+
+| s_id | s_name | s_address  | s_phone    | s_age |
++------+--------+------------+------------+-------+
+| s1   | ram    | delhi      | 9455123451 |    18 |
+| s2   | ramesh | gurgaon    | 9652431543 |    18 |
+| s3   | sujit  | chandigarh | 9156253131 |    20 |
+| s4   | Suresh | Delhi      | 9156768971 |    18 |
+| s5   | Ratan  | Delhi      | 9567890876 |    20 |
++------+--------+------------+------------+-------+
+5 rows in set (0.00 sec)
+
+
+ysql> insert into course values(1,"c_name");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into course values(2,"dsa");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> update course set c_name="dsa" where c_id=1;
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> insert into course values(3,"mern");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from course;
++------+--------+
+| c_id | C_name |
++------+--------+
+|    1 | dsa    |
+|    2 | dsa    |
+|    3 | mern   |
++------+--------+
+3 rows in set (0.00 sec)
+
+ysql> insert into student_course values("s1",1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student_course values("s1",3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student_course values("s2",1);
+Query OK, 1 row affected (0.28 sec)
+
+mysql> insert into student_course values("s3",2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student_course values("s4",2);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into student_course values("s4",3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student_course values("s5",2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from student_course;
++------+------+
+| S_id | c_id |
++------+------+
+| s1   |    1 |
+| s1   |    3 |
+| s2   |    1 |
+| s3   |    2 |
+| s4   |    2 |
+| s4   |    3 |
+| s5   |    2 |
++------+------+
+7 rows in set (0.00 sec)
+
+ysql> update course set c_name="java"  where c_id=2;
+Query OK, 1 row affected (0.34 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from course;
++------+--------+
+| c_id | C_name |
++------+--------+
+|    1 | dsa    |
+|    2 | java   |
+|    3 | mern   |
++------+--------+
+
+select * from students
+where s_address="delhi" and 
+s_id in (select sc.s_id from student_course sc join course c 
+	where sc.c_id=c.c_id and c.c_name="java");
+
+------+--------+-----------+------------+-------+
+| s_id | s_name | s_address | s_phone    | s_age |
++------+--------+-----------+------------+-------+
+| s4   | Suresh | Delhi     | 9156768971 |    18 |
+| s5   | Ratan  | Delhi     | 9567890876 |    20 |
++------+--------+-----------+------------+-------+
+2 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

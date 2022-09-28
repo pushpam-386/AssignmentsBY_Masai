@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="e1" class="push.classes.Employee" >
+    <property name="department" ref="dep1"/>
+    <constructor-arg name="empId" value="1" />
+    <constructor-arg name="empName" value="Pushpam" />
+    <constructor-arg name="address" value="Ramnagri" />
+    <constructor-arg name="salary" value="100000" />
+    </bean>
+    
+    <bean id="e2" class="push.classes.Employee" >
+    <constructor-arg name="empId" value="3" />
+    <constructor-arg name="empName" value="Goopu" />
+    <constructor-arg name="address" value="RamDev" />
+    <constructor-arg name="salary" value="7467" />
+    </bean>
+    
+    <bean id="dep1" class="push.classes.Department" >
+    <constructor-arg name="deptId" value="501" />
+    <constructor-arg name="deptName" value="Sales" />
+    <constructor-arg name="location" value="BBS" />
+    </bean>
+    
+    <bean id="dep2" class="push.classes.Department" >
+    <constructor-arg name="deptId" value="601" />
+    <constructor-arg name="deptName" value="Marketing" />
+    <constructor-arg name="location" value="MUM" />
+    
+    </bean>
+    <bean id="dem" class="push.classes.Demo"  init-method="myInit" scope="prototype" lazy-init="true" destroy-method="cleanUp"  >
+    <property name="theMap">
+    	<map>
+    		<entry key-ref="dep1" value-ref="e1" />
+    		
+    		<entry key-ref="dep2" value-ref="e2" />
+    	</map>
+    
+    </property>
+    
+    </bean>
+
+</beans>

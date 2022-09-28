@@ -1,0 +1,136 @@
+mysql> create table EmployeeDetails(EmpId int, fullName varchar(20), ManagerId int, doj date, city varchar(20));
+Query OK, 0 rows affected (0.33 sec)
+
+
+mysql> select * from employeeDetails;
++-------+--------------+-----------+------------+------------+
+| EmpId | fullName     | ManagerId | doj        | city       |
++-------+--------------+-----------+------------+------------+
+|   121 | john snow    |       321 | 2014-01-31 | Toronto    |
+|   321 | walter white |       986 | 2015-01-30 | california |
+|   421 | kuldeep rana |       876 | 2016-11-27 | New Delhi  |
++-------+--------------+-----------+------------+------------+
+3 rows in set (0.00 sec)
+
+
+
+
+mysql> create table employeeSalary(empId int primary key,project varchar(10),salary long,value int);
+Query OK, 0 rows affected (0.07 sec)
+
+
+
+
+mysql> alter table employeesalary rename COLUMN value to variable;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+mysql> insert into employeesalary values(121,"p1",8000,500);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employeesalary values(321,"p2",1000,1000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employeesalary values(421,"p1",1200,0);
+Query OK, 1 row affected (0.30 sec)
+
+mysql> select * from employeesalary;
++-------+---------+--------+----------+
+| empId | project | salary | variable |
++-------+---------+--------+----------+
+|   121 | p1      | 8000   |      500 |
+|   321 | p2      | 1000   |     1000 |
+|   421 | p1      | 1200   |        0 |
++-------+---------+--------+----------+
+3 rows in set (0.00 sec)
+
+
+mysql> alter table employeesalary add foreign key (empid) references employeeDetails(empid) ;
+Query OK, 3 rows affected (0.05 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> desc employeesalary;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| empId    | int         | NO   | PRI | NULL    |       |
+| project  | varchar(10) | YES  |     | NULL    |       |
+| salary   | mediumtext  | YES  |     | NULL    |       |
+| variable | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table employeedetails add primary key(empid);
+Query OK, 0 rows affected (0.35 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc employeedetails;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EmpId     | int         | NO   | PRI | NULL    |       |
+| fullName  | varchar(20) | YES  |     | NULL    |       |
+| ManagerId | int         | YES  |     | NULL    |       |
+| doj       | date        | YES  |     | NULL    |       |
+| city      | varchar(20) | YES  |     | NULL    |       |
++-----------+------------
+
+
+Answer..1------>>>>>
+
+
+
+mysql> select * from employeedetails where fullname like '__hn%';
++-------+-----------+-----------+------------+---------+
+| EmpId | fullName  | ManagerId | doj        | city    |
++-------+-----------+-----------+------------+---------+
+|   121 | john snow |       321 | 2014-01-31 | Toronto |
++-------+-----------+-----------+------------+---------+
+1 row in set (0.00 sec)
+
+
+
+Answer..2------>>>>>
+
+
+mysql> select * from employeedetails d join employeesalary s on d.empid=s.empid;
++-------+--------------+-----------+------------+------------+-------+---------+--------+----------+
+| EmpId | fullName     | ManagerId | doj        | city       | empId | project | salary | variable |
++-------+--------------+-----------+------------+------------+-------+---------+--------+----------+
+|   121 | john snow    |       321 | 2014-01-31 | Toronto    |   121 | p1      | 8000   |      500 |
+|   321 | walter white |       986 | 2015-01-30 | california |   321 | p2      | 1000   |     1000 |
+|   421 | kuldeep rana |       876 | 2016-11-27 | New Delhi  |   421 | p1      | 1200   |        0 |
++-------+--------------+-----------+------------+------------+-------+---------+--------+----------+
+3 rows in set (0.00 sec)
+
+Answer..3------>>>>>
+
+
+mysql> select d.empid,fullname,managerid,doj,city,project,salary,variable from employeedetails d join employeesalary s on d.empid=s.empid;
++-------+--------------+-----------+------------+------------+---------+--------+----------+
+| empid | fullname     | managerid | doj        | city       | project | salary | variable |
++-------+--------------+-----------+------------+------------+---------+--------+----------+
+|   121 | john snow    |       321 | 2014-01-31 | Toronto    | p1      | 8000   |      500 |
+|   321 | walter white |       986 | 2015-01-30 | california | p2      | 1000   |     1000 |
+|   421 | kuldeep rana |       876 | 2016-11-27 | New Delhi  | p1      | 1200   |        0 |
++-------+--------------+-----------+------------+------------+---------+--------+----------+
+3 rows in set (0.00 sec)
+
+Answer..4------>>>>>
+
+
+mysql> select max(salary),min(salary),avg(salary) from employeesalary;
++-------------+-------------+-------------+
+| max(salary) | min(salary) | avg(salary) |
++-------------+-------------+-------------+
+| 8000        | 1000        |        3400 |
++-------------+-------------+-------------+
+1 row in set (0.00 sec)
+
+Answer..5------>>>>>
+
+mysql> select empid from employeesalary where project=null;
+Empty set (0.00 sec)
+
+

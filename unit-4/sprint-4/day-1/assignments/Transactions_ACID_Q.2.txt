@@ -1,0 +1,43 @@
+In order to maintain consistancy in DB , before and after the tx certain properties should be followd 
+these are called ACID properties:
+
+A: (Atomicity) : (All or noting rule) the entire tx takes place at once or does not happens at all.
+
+C: Consistancy: the DB must be consistant before and after tx
+
+I: Isoloation: multiple tx should occurs independently at a time without any interference.
+
+D: Durability: The changes of a sucessfull tx should be permanent even if system failure occurs.
+
+
+--if we perform any DML operation on a table inside a tx area, that operation will be 
+partically commited(it will be stored in the local copy)
+
+--and any time we can rollback these operation
+
+--but once we  do commit, then only it will be stored permanently.
+
+Note: In Mysql it is bydefault autocommit is enabled.
+
+Note: in the DB all the DDL statements are by default commited.
+
+--in mysql to disable the autocommit mode:
+
+>set aut0commit = 0;
+
+to start the tx area in mysql:
+
+>start transaction
+
+>delete from x1 where id= 102;
+
+>rollback;
+
+>delete from x1 where id= 102;
+
+>commit;
+ 
+
+savepoint p1;
+
+

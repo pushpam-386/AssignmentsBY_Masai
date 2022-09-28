@@ -1,0 +1,65 @@
+
+mysql> create table person(id int primary key, email varchar(25) not null);
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> insert into person values(1, abc@gmail.com);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@gmail.com)' at line 1
+mysql> insert into person values(1, "abc@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into person values(1, "c@gmail.com");
+ERROR 1062 (23000): Duplicate entry '1' for key 'person.PRIMARY'
+mysql> insert into person values(2, "c@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into person values(3, "abc@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into person values(4, "abc@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into person values(5, "ac@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from person;
++----+---------------+
+| id | email         |
++----+---------------+
+|  1 | abc@gmail.com |
+|  2 | c@gmail.com   |
+|  3 | abc@gmail.com |
+|  4 | abc@gmail.com |
+|  5 | ac@gmail.com  |
++----+---------------+
+5 rows in set (0.00 sec)
+
+
+
+
+mysql> select email from person group by email having count(email)>1;
++---------------+
+| email         |
++---------------+
+| abc@gmail.com |
++---------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> select email,count(email) from person group by email having count(email)>1;
++---------------+--------------+
+| email         | count(email) |
++---------------+--------------+
+| abc@gmail.com |            3 |
++---------------+--------------+
+1 row in set (0.00 sec)
+
+mysql> select email,count(email) from person group by email;
++---------------+--------------+
+| email         | count(email) |
++---------------+--------------+
+| abc@gmail.com |            3 |
+| c@gmail.com   |            1 |
+| ac@gmail.com  |            1 |
++---------------+--------------+
+3 rows in set (0.00 sec)

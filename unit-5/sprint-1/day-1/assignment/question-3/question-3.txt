@@ -1,0 +1,10 @@
+Q3. Explain the core concepts of Maven
+
+
+Answer---->>Maven Core Concepts:
+
+POM Files
+Build Life Cycles, Phases and Goals
+Dependencies and Repositories
+Build Plugins
+Build Profiles

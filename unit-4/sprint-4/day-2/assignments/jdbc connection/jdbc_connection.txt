@@ -1,0 +1,21 @@
+Q. Write the steps involved in connecting any java application with the 
+database using JDBC?
+
+
+Answer-->
+
+1. Import JDBC packages.
+
+2. Load and register the JDBC driver.
+
+3. Open a connection to the database.
+
+4. Create a statement object to perform a query.
+
+5. Execute the statement object and return a query resultset.
+
+6. Process the resultset.
+
+7. Close the resultset and statement objects.
+
+8. Close the connectio

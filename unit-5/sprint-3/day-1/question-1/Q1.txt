@@ -1,0 +1,28 @@
+---> J2EE (Enterprise Edition): It is also a specification, implementation of 
+this specification is ApplicationServer s/w.
+
+-the application we develop to computerize the services of an Enterprise 
+is called as EA.
+
+--to overcome these challanges 2 company comes with f/w software:
+
+1.microsoft : .net f/w 
+
+2. sun-microsystem : J2EE f/w
+
+--the above f/w comes in the form of specification
+
+.net f/w : it is proprietary specification
+
+J2EE f/w : it is a open specification
+
+Some of the application server are:
+
+Websphere server : from IBM
+
+Weblogic server : from Oracle 
+
+Glassfish server : from Oracle 
+
+JBOSS server / wildfly : RedHat
+

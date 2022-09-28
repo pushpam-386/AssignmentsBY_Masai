@@ -1,0 +1,34 @@
+Q.2(b). Explain about the Layered Architecture of a Java Based Business application.
+
+
+Answer--->>
+
+-To maintain the bussiness data in secure and easily acssesbile manner it is mainly
+formed into differnt layers.
+-To process the data according to application reqirement. 
+
+Layared Architechture of JAVA Application are:--
+
+1.Presentation Layer/UI layer
+
+2.Bussiness Logic Layer/ Service layer
+
+3.Data Access Layer.
+
+
+1.Presentation Layer--> This layer is responsible for generating user defined 
+input web interface and also known as output sceen.
+-This layer provide interaction with user-End.
+-This layer has set of classes.
+
+2.Bussiness Layer--> Set of java classes used to organise bussiness organisation 
+logic implementation.
+-It is also known as Service layer.
+-Programmatical implementation of bussiness rule of any bussiness organization.
+
+3.Data Access Layer--> Set of java class used to perform CRUD operations with
+Database server.
+-It used many implentaion technique as JDBC and DAO, etc.
+
+It provide a good structure to any project to develop any good 
+performing application.  

@@ -1,0 +1,27 @@
+Q.2. What is the ACID acronym for? 
+     Describe each property individually with your own words
+
+Answer-->To maintain consistency in a database during the transaction, there 
+are certain properties known as ACID property.
+
+	ACID means=Atomicity
+		  =Consistency
+		  =Isolation
+		  =Durability
+		  
+
+Atomicity->This means transaction does'nt occur partially, 
+either it will happen completly else it will not occur at all.
+        It is also known as "All or Nothing property".
+
+Consistency->To maintain consistency of DataBase before and after 
+the transaction.
+
+Isolation->To ensure that transaction don't occur simultansly and 
+transaction occurs independently without any interfarence.
+
+Durability->After the completion transaction this update 
+and modify the database.
+
+
+    	

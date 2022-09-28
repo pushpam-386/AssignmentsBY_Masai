@@ -1,0 +1,43 @@
+Spring f/w:
+========
+
+
+--spring is a application f/w software to develop an EA.
+
+--s/w communities treat spring as a f/w of frameworks, becoz it gives the support of variaous other f/w also, like  hibernate, struts, JSF,etc.
+
+
+
+--spring is an open source,light weight application f/w that can be used in all the layers of java based Enterprise application developement.
+
+---with the spring f/w we can develop J2SE related or J2EE related application as well.
+
+--in early days of java based business application , programmer uses multiple java bean classes(normal java classes ) to build the business logic layer/ Service layer.
+
+--the Business logic layer only required the Enterprise capabilities like security, tx-management, logging, mailing ,etc, these Enterprise capabilities are also known as middlewere services to make our business logic perfect.
+
+
+
+--to overcome the above burden to develop a business logic/ service layer logic, 
+sun-microsystem has released EJB technology as a part of J2EE sepecification in 1998.
+
+
+--In EJB technology, programmer develop the main business logic , and EJB container
+provides these extra middleware services.
+
+
+--EJB reduced the middleware service development from the programmer, but it increased the complexities to access these middleware services, EJB component are heavy weight components( here our java class need to be devloped as a EJB component by implementing EJB technology related interfaces, need to override lots of unnessesary methods inside our class, need to register our class in varioaus xml files and deploy our EJB component inside the Application Server s/w)
+
+--EJB has been very powerfull but very complex to build the Business logic layer.
+
+--to build the business logic layer , simplicity of java bean classes + power of EJB - complexities of EJB 
+was realized in the industry.
+
+--Rod Jonshon. developed a f/w "Interface 21" to address the above need and rename it to spring and released Spring 1.0 in mid of 2004.
+
+--Spring f/w allows to write the business logic in a POJO classes, and 
+Spring Container provides the middleware services with less process overhead .
+
+--so our business logic related classes need not implement or extends any other classes or interfaces or verride any unnessacary methods . no need to install application server also.
+
+--unlike EJB container, Spring Container is a ligtweight container, can be activated in any type of java application (need not install AS.)

@@ -1,0 +1,33 @@
+1. Spring MVC : Spring is widely used for creating scalable applications. For web applications Spring 
+provides Spring MVC framework which is a widely used module of spring which is used to create scalable 
+web applications. Spring MVC framework enables the separation of modules namely Model View, Controller, 
+and seamlessly handles the application integration. This enables the developer to create complex applications 
+also using plain java classes. The model object can be passed between view and controller using maps. 
+The Spring MVC framework consists of the following components :
+
+Model – A model can be an object or collection of objects which basically contains the data of the application.
+View – A view is used for displaying the information to the user in a specific format. Spring supports various 
+technologies like freemarker, velocity, and thymeleaf.
+Controller – It contains the logical part of the application. @Controller annotation is used to mark that 
+class as a controller.
+Front Controller – It remains responsible for managing the flow of the web application. Dispatcher Servlet acts
+as a front controller in Spring MVC.
+
+
+
+2. Spring Boot : Spring Boot is built on top of the conventional spring framework. So, 
+it provides all the features of spring and is yet easier to use than spring. Spring Boot 
+is a microservice-based framework and making a production-ready application in very less time. 
+In Spring Boot everything is auto-configured. We just need to use proper configuration for utilizing 
+a particular functionality. Spring Boot is very useful if we want to develop REST API. 
+Spring Boot provides the facility to convert our project into war or jar files. 
+Also, the instance of Tomcat can be run on the cloud as well. 
+There are four main layers in Spring Boot :
+
+Presentation Layer – As the name suggests, it consists of views (i.e. frontend part).
+
+Data Access Layer – CRUD (create, retrieve, update, delete) operations on the database comes under this category.
+
+Service Layer – This consists of service classes and uses services provided by data access layers.
+
+Integration Layer – It consists of web different web services(any service available over the internet and uses XML messaging system).

@@ -1,0 +1,70 @@
+Spring Bean--->>
+Any java class, which will be registered with the "Spring container software" is known as Spring bean.
+The Spring bean is basically a POJO class.
+
+
+Spring container:
+In spring application, A pure java class that controls all the spring beans is known as a spring container.
+The Spring container is not like a J2EE container (EJB container, Web container), so no need to install any kind of
+server.
+The Spring container is a lightweight container.it can be activated in any kind of Java Application.
+Note: All the core functionalities provided by the spring framework are available through the spring
+container only.
+Spring container provides enterprise services with less processing overhead and reduced complexities to the
+spring beans.
+In addition to enterprise services, spring container provides the following basic services to the Spring Bean:
+1. Life-cycle management of the spring bean without implementing any interface inside our spring bean class.
+2. Dependency resolution: it will inject the dependency object to the dependent object based on the configuration
+done in a spring configuration file(XML file) / by using annotations also.
+
+
+
+
+
+Steps to create a Spring application:
+Step 1: Create a maven application.
+
+Step 2: Add the following dependency inside pom.xml file:
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-context</artifactId>
+<version>5.3.18</version>
+</dependency>
+
+Step 3: Develop a Java class :
+package com.masai;
+public class MyBusinessClass {
+public void fun1() {
+System.out.println("inside fun1 ");
+}
+}
+
+Step 4: Register the above java class with the Spring container and make it a Spring bean using the Spring
+configuration xml file
+Develop the Spring configuration file “applicationContext.xml” inside src/main/resources folder .
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="mb" class="com.masai.MyBusinessClass" />
+</beans>
+
+Step 5: Activate the Spring Container and pull the object of Spring Bean from the container through its id and call
+the business method.
+Example
+Main.java
+package com.masai;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class Main {
+public static void main(String[] args) {
+//activating the Spring container
+ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+MyBusinessClass mb = ctx.getBean(MyBusinessClass.class,"mb");
+mb.fun1();
+}
+}
+Configuring different types of depend

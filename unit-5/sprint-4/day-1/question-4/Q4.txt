@@ -1,0 +1,19 @@
+The resource has representations like XML, HTML, and JSON. The current state is capture by representational 
+resources. When we request a resource, we provide the representation of the resource. 
+The important methods of HTTP are:-
+
+GET: It reads a resource.
+PUT: It updates an existing resource.
+POST: It creates a new resource.
+DELETE: It deletes the resource.
+
+
+
+
+HTTP also defines the following standard status code:-
+
+404: RESOURCE NOT FOUND
+200: SUCCESS
+201: CREATED
+401: UNAUTHORIZED
+500: SERVER ERROR

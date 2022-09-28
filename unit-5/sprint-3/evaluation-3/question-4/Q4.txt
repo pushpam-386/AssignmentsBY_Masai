@@ -1,0 +1,39 @@
+Q4/- What do you mean by the Spring Bean, explain the life
+cycle of the Spring Bean.
+
+
+Spring Bean------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-By definition, a Spring bean is an object that form the backbone of your 
+application and that is managed by the Spring IoC container. 
+
+-A bean is an object that is instantiated, assembled, and otherwise managed 
+by a Spring IoC container.By definition, a Spring bean is an object that form the 
+backbone of your application and that is managed by the Spring IoC container. 
+
+-A bean is an object that is instantiated, assembled, and otherwise managed by a 
+Spring IoC container.
+
+
+
+Life Cycle of Spring Bean------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+-The lifecycle of any object means when & how it is born, how it behaves throughout its life, 
+and when & how it dies. 
+
+-Similarly, the bean life cycle refers to when & how the bean is instantiated, 
+what action it performs until it lives, and when & how it is destroyed.  
+
+-Bean life cycle is managed by the spring container. 
+When we run the program then, first of all, the spring container gets started. After that, the container creates the instance of a bean as per the request, and then dependencies are injected. And finally, the bean is destroyed when the spring container is closed. Therefore, if we want to execute some code on the bean instantiation and just after closing the spring container, then we can write that code inside the custom init() method and the destroy() method.
+
+The following image shows the process flow of the bean life cycle.  
+
+Steps--:
+-Conatiner Started -> 
+-Bean Instantiated ->
+-Dependency Injected -> 
+-Custom init() method -> 
+-Custom utility method -> 
+-Custom destroy() method

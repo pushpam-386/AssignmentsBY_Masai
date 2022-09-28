@@ -1,0 +1,22 @@
+create table account(id int primary key,
+email varchar(20),
+address varchar(20),
+balance int);
+
+
+mysql> create table account(id int primary key,
+    -> email varchar(20),
+    -> address varchar(20),
+    -> balance int);
+
+
+mysql> desc account;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| id      | int         | NO   | PRI | NULL    |       |
+| email   | varchar(20) | YES  |     | NULL    |       |
+| address | varchar(20) | YES  |     | NULL    |       |
+| balance | int         | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)

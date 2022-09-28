@@ -1,0 +1,12 @@
+Q4. What elements are used for creating a pom.xml file?
+
+
+Answer--->>>
+packaging	->defines packaging type such as jar, war etc.
+name	        ->defines name of the maven project.
+url	        ->defines url of the project.
+dependencies	->defines dependencies for this project.
+dependency	->defines a dependency. It is used inside dependencies.
+scope	        ->defines scope for this maven project. It can be compile, 
+                  provided, runtime, test and system.
+        

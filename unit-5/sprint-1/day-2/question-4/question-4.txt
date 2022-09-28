@@ -1,0 +1,27 @@
+JPA Application:-
+---------------------
+
+any java application, that uses JPA api to perform persistnce operation (CRUD ) operation with 
+the DB s/w is called as JPA application.
+
+JPA architecture:-
+--------------------
+
+Entity class or persistence class:-
+--------------------------------------
+
+--it is a class using which we map our table.
+
+--if we are using the annotaion, then we need not map this class with the table inside the xml mapping file.
+
+--an Entity class or persistence class is a java class that is developed corresponding to a table of DB.  
+
+--this class has many instance variables should be there as same as columns in the corresponding table
+
+--we should take Entity class as a POJO class.
+
+--we need to provide mapping information with the table in this class only using annotaitons.
+
+Note:- when we gives this persistance /Entity class obj to the ORM s/w, then ORM s/w will 
+decide the destination DB s/w based on the configuration done in a xml file which is called as hibernate-configuration file.
+

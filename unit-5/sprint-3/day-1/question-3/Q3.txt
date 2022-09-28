@@ -1,0 +1,32 @@
+challanges to develop Enterprise application:
+==================================
+
+--An Enterprise application is bydefault a Distributed application,becoz Enterprise application is divided into seperate modules, and each module can be a independent application, here each module will colaborate each other and provide services as a whole.
+
+1. data security : the data exchange should be encrypted and decrepted. authentication and authorization.
+
+2. client can access the application in platform and language independent form, i.e presentation logic should be web-enabled. so client can access the application through browser.
+
+presentation could be GUI : that can be access by the browser (webapplication), they are not reusable
+or 
+could be raw data  (JSON or xml format)  (webservices) generating the api , they are reusable
+
+
+GoAir: -------> webapplication ---------------> GUI ----> book the ticket (it is used by the end-user )
+   |
+   --------------> it is having a webservices which generates a REST api and raw data (in json or xml format) (it is used by other application)
+
+
+Yarta: webapplication------------->GUI ----->book the ticket 
+
+
+3. transaction management: (either everything or nothing should happen )
+
+4. logging 
+
+5.messaging 
+
+6.mailing 
+
+etc..
+

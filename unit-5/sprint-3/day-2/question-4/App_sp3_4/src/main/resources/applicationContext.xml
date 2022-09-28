@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="s" class="push.classes.Student" >
+<constructor-arg name="roll" value="100" />
+<constructor-arg name="name" value="Ram" />
+<constructor-arg name="marks" value="780" />
+</bean>
+
+<bean id="c" class="push.classes.Collage" >
+<property name="collage_name" value="NIT"/>
+<property name="collage_address" value="Patna"/>
+<property name="student" ref="s"/>
+</bean>
+
+</beans>

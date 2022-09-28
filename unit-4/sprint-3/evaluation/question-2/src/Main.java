@@ -34,7 +34,7 @@ public class Main {
 
         for (Student s1:studentDB.getStudentsData()) {
             System.out.println("Student id: "+s1.getStudentId());
-            System.out.println("Studen email: "+s1.getStudent_email());
+            System.out.println("Student email: "+s1.getStudent_email());
             System.out.println("Student Address: "+s1.getStudentAddress());
             System.out.println("Student Password"+s1.getStudentPassword());
             System.out.println("Student Name: "+s1.getStudentName());

@@ -1,0 +1,44 @@
+2.(a) Explain difference between JPA and Hibernate.
+
+
+Answer--->
+
+JPA--->>(Java Persistence Api) 
+        1.It is not implementation of any technology.
+          -It is only a java Specification.
+        
+        2.It a standard API that permits to perform datases operations.
+
+        3.Package= javax.persistence
+         
+        4.It is an object oriented query language.
+
+        5.To enterconnect with Entity Manager Factory.
+        
+        6.It provide connectivity and performace based on platform independent.
+
+        7.It is most widely used api in ORM Technique.
+
+
+Hibernate--->>1.Hibernate is an object Relational Mapping tool that is used 
+                to save  the java objects in the RDBms. 
+
+              2.Package= org.hibernate
+
+              3.It is an an implementation of JPA. 
+
+              4.we can use both hibernate and standard JPA api for implementation.
+
+              5.It is used for mapping java data types in sql datatypes in SQL 
+                database tables 
+
+              6.It uses Session instance as SessionFacorory.
+
+              7.For actions we use to use different methods of SessionFactory 
+                class.
+
+              8.Methods vary in hibernate and JPA as both uses different set of 
+               methods in different class.
+
+
+    

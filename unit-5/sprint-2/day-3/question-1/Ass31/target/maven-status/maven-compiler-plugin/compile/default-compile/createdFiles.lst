@@ -1,0 +1,6 @@
+ass\useCase\StudentDetailsOnCol_Id.class
+ass\classs\Student.class
+ass\classs\College.class
+ass\useCase\AddStudent.class
+ass\useCase\CollegeDetailsBasedOnStudentRoll.class
+ass\Connect\EFMConnnect.class

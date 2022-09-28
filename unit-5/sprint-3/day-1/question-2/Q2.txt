@@ -1,0 +1,20 @@
+Difference between AS and WebServer:
+===============================
+
+Java Based Web-server is a small part/ subset of Application server s/w.
+
+--ApplicationServer contains both EJB container and ServletContainer s/w
+where as WebServer contains only Servlet Container s/w.
+
+--AS can be communicated with any kind of protocol ex: http, ftp, smtp, etc
+whereas WS can be communicated only using Http protol.
+
+
+--mostly used java based Web server s/w is: Apache Tomcat server.
+
+
+--Container is a special type of s/w which provides runtime support (execution environment) to our components.
+
+
+
+****Note: After Spring, we don't need AS anymore, using a WebServer also we can develop an EA.

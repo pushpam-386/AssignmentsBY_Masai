@@ -1,0 +1,20 @@
+create table Bank(Name varchar(20),
+Account Number varchar(20),
+Balance double);
+
+insert into bank values("Ram", "ac-12123", 50000);
+insert into bank values("John", "ac-w4123", 60000);
+insert into bank values("David", "ac-23134", 10000);start transaction; delete from Persons where age=30; rollback;
+
+
+start transaction; 
+UPDATE Balance
+SET balance = balance - 100
+WHERE name = "John" ;
+
+
+UPDATE Balance
+SET balance = balance + 100
+WHERE name = "David" ;
+
+

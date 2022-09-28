@@ -1,0 +1,114 @@
+Tight coupling and loose coupling between objects:--
+
+If one class calls another class functionality, then we can say that both classes are coupled with the other.
+Example: If class A calls the functionality of class B then class A will be called a dependent class and class B will
+be called a dependency class.
+class B{
+public void funB(){
+System.out.println("inside funB of B");
+}
+}
+class A { // Dependent
+B b1 = new B(); //dependency
+public void funA(){
+System.out.println("inside funA of A");
+b1.funB();
+}
+}
+Here A class needs the service of B class then A will be dependent on B
+If the dependent class wants to call the methods of the dependency class then, it has to create an object of its
+dependency class, and then the dependent class can call the functionality of its dependency class.
+Now suppose, if any changes are made in the dependency class and if it is forced to do the changes inside the
+dependent class also then we can say that both classes are tightly coupled with each other.
+Example:
+//dependency class
+public class Car {
+public void start() {
+System.out.println("Car started...");
+}
+}
+Spring Day1 3
+//dependent on the car class
+public class Travel {
+Car c=new Car();
+public void journey() {
+c.start();
+System.out.println("Jounrney started...");
+}
+}
+Here both the dependent and the dependency classes are tightly coupled with each other, because if change the
+method name start() to go() inside the dependency class then we need to change the same inside the dependent
+class also.
+Tight coupling generates the problem in another way also, when the dependent class wants to change from the
+current dependency to another similar dependency ex:
+//another dependency
+public class Bike {
+public void ride() {
+System.out.println("ride started....");
+}
+}
+Here if we change the dependency from Car to Bike we need to modify the dependent class also.
+Example:
+public class Travel {
+//Car c=new Car();
+Bike b=new Bike();
+public void journey() {
+//c.start();
+b.ride();
+System.out.println("Jounrney started...");
+}
+}
+In order to get loose coupling from dependent to its dependencies we need to follow the following rules:
+1. Design the dependencies classes by the following POJO by the POJI model.
+Spring Day1 4
+2. Apply the Dependency Injection mechanism.
+Example:
+//Vehicle.java
+interface Vehicle {
+public void go();
+}
+//dependency class
+class Car implements Vehicle{
+public void start() {
+System.out.println("Car started...");
+}
+@Override
+public void go() {
+start();
+}
+}
+class Bike implements Vehicle{
+public void ride() {
+System.out.println("ride started....");
+}
+@Override
+public void go() {
+ride();
+}
+}
+//dependent on the car class
+class Travel {
+//it is the dependency
+Vehicle v; //here we can store one of its implemented class obj.
+//constructor injection point
+/*public Travel(Vehicle v) {
+this.v=v;
+} */
+//setter injection point
+public void setV(Vehicle v) {
+this.v=v;
+}
+public void journey() {
+Spring Day1 5
+v.go();
+System.out.println("Jounrney started...");
+}
+}
+class Demo {
+public static void main(String[] args) {
+//Travel tr=new Travel(new Car()); //injecting the dependency obj to the dependent, by calling constrcutor injection.
+Travel tr=new Travel();
+tr.setV(new Car()); // injecting the dependency obj to the dependent, by calling setter method.
+tr.journey();
+}
+}

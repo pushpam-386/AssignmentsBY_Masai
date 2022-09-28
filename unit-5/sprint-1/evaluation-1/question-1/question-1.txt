@@ -1,0 +1,50 @@
+Question 1:
+What are the advantages of using Hibernate over JDBC?
+
+
+Anwer---->>
+
+Hibernate--It is one of the implementation of ORM based Framework software.
+
+Limitations of JDBC based Persistence logic:--
+
+1.JBDC code is the database dependent code because it uses software dependent 
+query.
+
+2.JDBC code throws lot of Checked Exception.
+
+3.JDBC have to repeat the boiler plate code.
+
+4.JDBC can't store the java objects into table directly.
+
+5.JDBC reqires each time connection to execute any query.
+
+
+--Inorder to overcome these limitations we use hibernate software using ORM 
+approach for Entity mapping.
+
+
+There are many software of ORM approach like--:
+Hibernate, Toplink, Ibatis, Etc..
+
+Hibernate::-->>>>
+
+1.It provides abstraction layer.
+
+2.No need to download and add dependencies.
+
+3.Each object acts as row in a table.
+
+4.Each column is mapped with Class instance variable.
+
+5.To need to create connection each time.
+
+6.No need to provide query to do DML, DRl manupulation from databses.
+
+7.Easy to access data in more acceble form.
+
+8.Most used technology used in DATA logic layer.
+
+9.Hibernate used its own api also it use JPA api to create uniformity.
+
+10.JPA provide platform independent work flow.         
